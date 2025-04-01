@@ -8,13 +8,10 @@
 </head>
 
 <body>
-    <?php
-        require_once __DIR__ . '/../../../helpers/config.php';
-        require_once __DIR__ . '/../google-login/google-oauth.php';
-    ?>
+    <?php require_once __DIR__ . '/../../../helpers/config.php'; ?>
     <form action="<?php echo AUNTIFICATION_LOC; ?>/controllers/login.php" method="POST">
-        <label for="login">Login:</label>
-        <input type="text" id="login" name="login" required>
+        <label for="email">Login:</label>
+        <input type="text" id="email" name="email" required>
         <br>
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required>
@@ -24,7 +21,7 @@
         <br>
         <button type="submit">Login</button>
         <br>
-        <a href="<?php echo $client->createAuthURL(); ?>" class="google-login-btn">Login trough Google</a>
+        <a href="<?php echo AUNTIFICATION_LOC; ?>/controllers/google-oauth.php" class="google-login-btn">Login trough Google</a>
         <br>
         <a href="<?php echo AUNTIFICATION_LOC; ?>/controllers/registration.php">Register</a>
         <br>

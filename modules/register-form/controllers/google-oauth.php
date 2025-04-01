@@ -1,6 +1,6 @@
 <?php
-    require_once __DIR__ . '/../../../helpers/config.php';
     require_once __DIR__ . '/../../../helpers/alert.php';
+    require_once __DIR__ . '/../../../helpers/config.php';
     //that for google auth library
     require_once __DIR__ . '/../../../vendor/autoload.php';
 
@@ -13,7 +13,12 @@
     $client->addScope("email");
     $client->addScope("profile");
 
-    if (isset($_GET['code']))
+    if(!isset($_GET['code']))
+    {
+        header('Location: ' . $client->createAuthUrl());
+        exit;
+    }
+    else
     {
         $token = $client->fetchAccessTokenWithAuthCode($_GET['code']);
         $client->setAccessToken($token);
@@ -24,6 +29,6 @@
         $email = $googleAccountInfo->email;
         $id = $googleAccountInfo->id;
 
-        alert("Welcome: " . $name . "Your email is: " . $email);
+        alert("Id is: " . $id . ". And email: " . $email);
     }
 ?>
