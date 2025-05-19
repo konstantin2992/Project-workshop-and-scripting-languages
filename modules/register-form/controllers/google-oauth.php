@@ -1,10 +1,9 @@
 <?php
-    require_once __DIR__ . '/../../../helpers/alert.php';
     require_once __DIR__ . '/../../../helpers/config.php';
-    //that for google auth library
     require_once __DIR__ . '/../../../vendor/autoload.php';
-
-    session_start();
+    require_once __DIR__ . '/../helpers/session-start.php';
+    require_once __DIR__ . '/../../../helpers/alert.php';
+    require_once __DIR__ . '/../../../helpers/sql.php';
 
     $client = new Google_Client();
     $client->setClientId(GOOGLE_CLIENT_ID);
@@ -26,9 +25,30 @@
         $googleAccount = new Google_Service_Oauth2($client);
         $googleAccountInfo = $googleAccount->userinfo->get();
 
-        $email = $googleAccountInfo->email;
-        $id = $googleAccountInfo->id;
-
-        alert("Id is: " . $id . ". And email: " . $email);
+        $info["email"] = $googleAccountInfo->email;
     }
+
+    $mysqli = Sql_init();
+    $sql = '
+        SELECT email, user_id
+        FROM users
+        WHERE email = ?
+    ';
+
+    $stmt = mysqli_prepare($mysqli, $sql);
+    mysqli_stmt_bind_param($stmt, "s",
+        $info["email"]
+    );
+
+    mysqli_stmt_execute($stmt);
+    $result = mysqli_stmt_get_result($stmt);
+
+    if($row = mysqli_fetch_assoc($result))
+    {
+        $_SESSION['email'] = $row['email'];
+        alert("You logined");
+    }
+    else
+        alert("We don't find account!"); // TODO change to redirect on register or go to home, login or something like that.
+
 ?>

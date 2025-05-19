@@ -1,4 +1,0 @@
-git init
-git commit
-git remote add origin git@github.com:konstantin2992/Project-workshop-and-scripting-languages.git
-git push -u origin master

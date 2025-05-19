@@ -1,13 +1,8 @@
 <?php
     require_once __DIR__ . '/../../../helpers/alert.php';
-
+    require_once __DIR__ . '/../../../helpers/sql.php';
     include __DIR__ . '/../views/login-page.php';
 
-    if(isset($_POST['remember']))
-    {
-        setcookie('email', $_POST['email'], (time()+((365*24*60*60)*3)));
-        setcookie('password', $_POST['password'], (time()+((365*24*60*60)*3)));
-    }
     /* That for deleting cookie from memory. I set it here as an example, but in future would be good to put it in "leave acount" button.
     else
     {
@@ -15,8 +10,38 @@
         setcookie('password', $_POST['password'], ( time() - (24 * 60 * 60) ));
     }
     */
+
     if(!empty($_POST))
     {
-        alert("you set email - \"{$_POST['email']}\" and password - \"{$_POST['password']}\" and remember is - \"{$_POST['remember']}\", but your coockie has login - \"{$_COOKIE['email']}\" and password - \"{$_COOKIE['password']}\"");
+        $mysqli = Sql_init();
+        $sql = '
+            SELECT email, password_hash
+            FROM users
+            WHERE email = ?
+        ';
+
+        $stmt = mysqli_prepare($mysqli, $sql);
+        mysqli_stmt_bind_param($stmt, "s",
+            $email
+        );
+
+        $email = $_POST['email'];
+        $hashPassword = hash('sha512', $_POST['password']);
+
+        mysqli_stmt_execute($stmt);
+        $result = mysqli_stmt_get_result($stmt);
+
+        if($row = mysqli_fetch_assoc($result))
+            if($hashPassword == $row['password_hash'])
+            {
+                if(isset($_POST['remember']))
+                {
+                    setcookie('email', $email, (time()+((365*24*60*60)*3)));
+                    setcookie('password', $hashPassword, (time()+((365*24*60*60)*3)));
+                }
+                alert("Success! You loggined into: " . $row['email']);
+            }
+        else
+            alert("No");
     }
 ?>
