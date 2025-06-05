@@ -1,0 +1,143 @@
+
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #f0f0f0;
+    --danger-color: #e53935;
+    --font-size-base: 16px;
+    --font-size-large: 18px;
+    --font-size-title: 24px;
+    --border-radius: 8px;
+    --spacing: 12px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: var(--spacing);
+    background-color: #ffffff;
+    color: #333;
+    font-size: var(--font-size-base);
+}
+
+h1, h2 {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+h1 {
+    font-size: var(--font-size-title);
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: var(--font-size-large);
+    margin: 16px 0;
+}
+
+form {
+    margin: 0;
+    display: inline-block;
+}
+
+select, input[type="text"], button {
+    font-size: var(--font-size-base);
+    padding: 8px;
+    margin: 4px;
+    border: 1px solid #ccc;
+    border-radius: var(--border-radius);
+}
+
+select {
+    background-color: #fff;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #388e3c;
+}
+
+a {
+    color: white;
+    background-color: var(--danger-color);
+    padding: 6px 10px;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+    margin-left: 4px;
+    font-size: var(--font-size-base);
+}
+
+a:hover {
+    background-color: #b71c1c;
+}
+
+table {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: auto;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: var(--secondary-color);
+    font-weight: 600;
+}
+
+tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+input[type="text"] {
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    tr {
+        margin-bottom: 1rem;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: var(--border-radius);
+    }
+
+    td {
+        padding: 8px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    td::before {
+        content: attr(data-label);
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    th {
+        display: none;
+    }
+}
+

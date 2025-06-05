@@ -1,0 +1,818 @@
+@import url("main-style.css");
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-img {
+    height: 30px;
+    width: auto;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.logo span {
+    color: #3498db;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #2c3e50;
+    white-space: nowrap;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.login-btn {
+    padding: 8px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(41, 128, 185, 0.3);
+}
+
+.messages-icon {
+    height: 24px;
+    width: auto;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.messages-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Main Content Styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.sidebar {
+    width: 250px;
+    padding-right: 20px;
+}
+
+.main-content {
+    flex: 1;
+}
+
+/* Search Bar Styles */
+.search-container {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.search-bar {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color: #f0f2f5;
+    border-radius: 20px;
+    padding: 8px 15px;
+}
+
+.search-bar input {
+    border: none;
+    background: transparent;
+    padding: 5px 10px;
+    width: 100%;
+    outline: none;
+    font-size: 14px;
+}
+
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+h2 {
+    color: #2a5885;
+    font-size: 18px;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.reset-filters {
+    color: #2a5885;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.filter-section {
+    margin-bottom: 20px;
+}
+
+.filter-option {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.filter-option input {
+    margin-right: 10px;
+}
+
+.city-name {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Updated Doctor Card Styles */
+.doctor-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+}
+
+.doctor-info-container {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.doctor-header {
+    display: flex;
+    margin-bottom: 15px;
+    gap: 15px;
+}
+
+.doctor-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #e1f5fe;
+}
+
+.doctor-info-main {
+    flex: 1;
+}
+
+.doctor-specialty {
+    color: #666;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.doctor-name {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.doctor-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.detail-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.detail-label {
+    font-size: 13px;
+    color: #888;
+    margin-bottom: 3px;
+}
+
+.detail-value {
+    font-weight: 500;
+}
+
+.doctor-price {
+    font-weight: bold;
+    color: #2a5885;
+}
+
+.clinic-type {
+    color: #666;
+    font-size: 14px;
+}
+
+.clinic-name {
+    font-size: 14px;
+}
+
+.city {
+    font-size: 14px;
+    color: #666;
+}
+
+.doctor-rating {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.rating-value {
+    font-weight: bold;
+    margin-right: 5px;
+    color: #2a5885;
+}
+
+.rating-count {
+    color: #888;
+    font-size: 14px;
+}
+
+/* Date and Time Selection */
+.date-time-container {
+    width: 300px;
+    min-width: 300px;
+}
+
+.date-time-selection {
+    border-left: 1px solid #eee;
+    padding-left: 20px;
+    height: 100%;
+}
+
+.date-selector {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    overflow-x: auto;
+    padding-bottom: 5px;
+}
+
+.date-option {
+    min-width: 70px;
+    text-align: center;
+    padding: 8px 5px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.date-option:hover {
+    background-color: #f0f7ff;
+}
+
+.date-option.active {
+    background-color: #e1f5fe;
+    font-weight: 500;
+}
+
+.day-name {
+    font-size: 14px;
+    color: #555;
+}
+
+.day-date {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.time-slots-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 10px;
+}
+
+.time-slot {
+    padding: 8px;
+    text-align: center;
+    background-color: #f8fafc;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 14px;
+    border: 1px solid #e1e5eb;
+}
+
+.time-slot:hover {
+    background-color: #e1f5fe;
+    border-color: #b3d7ff;
+}
+
+.time-slot.booked {
+    background-color: #f9f9f9;
+    color: #ccc;
+    cursor: not-allowed;
+    text-decoration: line-through;
+}
+
+.time-slot.selected {
+    background-color: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+.qualification-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+.qualification-table th, .qualification-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.selected {
+    background-color: #e1f5fe;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.online-booking {
+    color: #2a5885;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    color: #666;
+}
+
+.footer-link {
+    cursor: pointer;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+@keyframes modalopen {
+    from {opacity: 0; transform: translateY(-50px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2a5885;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #333;
+}
+
+.modal-body {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.form-group input, 
+.form-group textarea, 
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+.btn-secondary {
+    background-color: #f0f0f0;
+    color: #333;
+    border: none;
+}
+
+.btn-secondary:hover {
+    background-color: #e0e0e0;
+}
+
+/* Chat Button Styles */
+.chat-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #3498db;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 999;
+    transition: all 0.3s;
+}
+
+.chat-btn:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+}
+
+.chat-icon {
+    font-size: 24px;
+}
+
+/* Chat Modal Styles */
+.chat-modal {
+    display: none;
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 350px;
+    height: 500px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 1000;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.chat-header {
+    background-color: #3498db;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-title {
+    font-weight: bold;
+}
+
+.chat-close {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.chat-body {
+    flex: 1;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+}
+
+.message {
+    margin-bottom: 15px;
+    max-width: 80%;
+    padding: 10px 15px;
+    border-radius: 18px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.received {
+    background-color: #e5e5ea;
+    color: #000;
+    align-self: flex-start;
+    border-bottom-left-radius: 5px;
+}
+
+.sent {
+    background-color: #3498db;
+    color: white;
+    align-self: flex-end;
+    margin-left: auto;
+    border-bottom-right-radius: 5px;
+}
+
+.chat-footer {
+    padding: 15px;
+    border-top: 1px solid #eee;
+    display: flex;
+    gap: 10px;
+}
+
+.chat-input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    outline: none;
+}
+
+.send-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+/* Payment Section Styles */
+.payment-section {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    border: 1px solid #eee;
+}
+
+.payment-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #2a5885;
+}
+
+.payment-options {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.payment-option {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.payment-option.selected {
+    border-color: #3498db;
+}
+
+.payment-option img {
+    height: 30px;
+    margin-bottom: 5px;
+}
+
+.total-amount {
+    font-weight: bold;
+    text-align: right;
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+/* Card Payment Form Styles */
+.card-form {
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 6px;
+    border: 1px solid #eee;
+}
+
+.card-input-group {
+    margin-bottom: 15px;
+}
+
+.card-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+}
+
+.card-row {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.card-col {
+    flex: 1;
+}
+
+.card-icon {
+    height: 24px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+/* Steps Navigation */
+.steps {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.steps::before {
+    content: '';
+    position: absolute;
+    top: 15px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #eee;
+    z-index: 1;
+}
+
+.step {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 30%;
+}
+
+.step-number {
+    width: 30px;
+    height: 30px;
+    background-color: #ddd;
+    color: #666;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 5px;
+    font-weight: bold;
+}
+
+.step.active .step-number {
+    background-color: #3498db;
+    color: white;
+}
+
+.step.completed .step-number {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.step-title {
+    font-size: 12px;
+    color: #666;
+}
+
+.step.active .step-title {
+    color: #3498db;
+    font-weight: 500;
+}
+
+/* Hidden steps content */
+.step-content {
+    margin: 40px auto; /* Top/bottom margin + horizontal centering */
+    max-width: 500px;
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+.city-select {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    background-color: white;
+    margin-bottom: 15px;
+}
+
+.city-select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}

@@ -1,0 +1,126 @@
+@import url("main-style.css");
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: #f5f7fa;
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+footer {
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.login-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+}
+
+.login-section > *:last-child {
+  margin-top: auto;
+}
+
+form {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  max-width: 400px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #444;
+}
+
+form input[type="text"],
+form input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52,152,219,0.2);
+  outline: none;
+}
+
+form input[type="checkbox"] {
+  margin-right: 8px;
+}
+
+form button {
+  display: block;
+  width: 100%;
+  padding: 14px 0;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+
+form button:hover {
+  background-color: #2980b9;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(41,128,185,0.3);
+}
+
+form a {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+form a:hover {
+  text-decoration: underline;
+}
+
+.google-login-btn {
+  background-color: #db4437;
+  color: #fff;
+  padding: 12px;
+  text-align: center;
+  border-radius: 8px;
+  margin-top: 20px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.google-login-btn:hover {
+  background-color: #c23321;
+  transform: translateY(-1px);
+}
+

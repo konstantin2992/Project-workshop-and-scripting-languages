@@ -8,4 +8,6 @@
     define('USERNAME', 'healthsync');
     define('PASSWORD', '1234');
     define('DATABASE', 'healthsync');
+
+    define('QRURL', 'localhost:3000/modules/user-info/controllers/user-info.php');
 ?>

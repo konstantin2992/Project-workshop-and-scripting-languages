@@ -30,7 +30,7 @@
 
     $mysqli = Sql_init();
     $sql = '
-        SELECT email, user_id
+        SELECT email, password_hash
         FROM users
         WHERE email = ?
     ';
@@ -45,8 +45,9 @@
 
     if($row = mysqli_fetch_assoc($result))
     {
-        $_SESSION['email'] = $row['email'];
-        alert("You logined");
+        $email = $row['email'];
+        $password = $row['password_hash'];
+        require_once __DIR__ . '/../../../modules/register-form/controllers/login.php';
     }
     else
         alert("We don't find account!"); // TODO change to redirect on register or go to home, login or something like that.

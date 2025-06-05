@@ -1,0 +1,124 @@
+@import url("main-style.css");
+
+/* Hero Section */
+.hero {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f0f8ff 0%, #e6f2ff 100%);
+    position: relative;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.find-doctor-btn {
+    padding: 14px 28px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.2);
+}
+
+.find-doctor-btn:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(41, 128, 185, 0.3);
+}
+
+.doctor-image {
+    flex: 1;
+    text-align: right;
+}
+
+.doctor-image img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Benefits Section */
+.benefits {
+    margin-bottom: 60px;
+    padding: 60px 0;
+    background-color: #fff;
+}
+
+.benefits h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 50px;
+    color: #2c3e50;
+    font-weight: 700;
+}
+
+.benefits-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.benefit-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border: 1px solid #e9ecef;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.benefit-card h3 {
+    font-size: 22px;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.benefit-card p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 0;
+    line-height: 1.7;
+}
+
+.benefit-card h4 {
+    font-size: 18px;
+    color: #3498db;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}

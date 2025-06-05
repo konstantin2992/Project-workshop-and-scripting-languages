@@ -1,0 +1,188 @@
+@import url("main-style.css");
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  background-color: #f5f7fa;
+}
+
+body {
+    min-height: 100vh; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f5f7fa;
+    flex-direction: column; 
+}
+.container_main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* Секция регистрации — центрируем */
+.registration-section {
+  display: flex;
+  justify-content: center;
+  padding: 80px 0;
+  background-color: #f5f7fa;
+}
+
+.birth-gender-container {
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    grid-column: span 2;
+}
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+.form-row .form-control {
+    flex: 1;
+    min-width: 0;
+}
+.gender-options {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.gender-options > label {
+    margin-right: 1rem;
+}
+
+/* Карточка формы */
+.registration-section .modal-content {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 40px;
+  max-width: 450px;
+  width: 100%;
+  position: relative;
+}
+
+/* Кнопка закрыть (в правом верхнем углу карточки) */
+.registration-section .close-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #aaa;
+  cursor: pointer;
+}
+.registration-section .close-btn:hover {
+  color: #333;
+}
+
+/* Заголовок карточки */
+.registration-section .modal-header h2 {
+  margin: 0;
+  color: #2c3e50;
+  font-size: 28px;
+  font-weight: 700;
+}
+.registration-section .modal-header p {
+  margin-top: 8px;
+  color: #666;
+  font-size: 15px;
+}
+
+/* Ошибки */
+.errors {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  color: #e74c3c;
+  font-size: 14px;
+}
+.errors li {
+  margin-bottom: 5px;
+}
+
+/* Поля формы */
+.form-group {
+  margin-bottom: 20px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #444;
+}
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.form-group input:focus,
+.form-group select:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52,152,219,0.2);
+  outline: none;
+}
+
+/* Кнопка отправки */
+.btn.btn-primary {
+  display: block;
+  width: 100%;
+  padding: 14px 0;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn.btn-primary:hover {
+  background-color: #2980b9;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(41,128,185,0.3);
+}
+
+/* Разделитель */
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 25px 0;
+  color: #777;
+  font-size: 14px;
+}
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #eee;
+}
+.divider::before { margin-right: 15px; }
+.divider::after  { margin-left: 15px; }
+
+/* Ссылка-переключатель */
+.auth-switch {
+  text-align: center;
+  font-size: 15px;
+  color: #666;
+}
+.auth-switch a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+}
+.auth-switch a:hover {
+  text-decoration: underline;
+}

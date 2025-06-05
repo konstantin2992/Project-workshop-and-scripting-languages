@@ -1,0 +1,343 @@
+@import url("main-style.css");
+
+.profile-container {
+    display: flex;
+}
+
+.profile-nav {
+    width: 250px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.profile-nav h2 {
+    color: #2c3e50;
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.user-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.nav-tabs {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-tab {
+    padding: 12px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 5px;
+    transition: all 0.2s;
+}
+
+.nav-tab:hover {
+    background-color: #f0f7ff;
+}
+
+.nav-tab.active {
+    background-color: #e1f5fe;
+    font-weight: 500;
+}
+
+/* Контент профілю */
+.profile-content {
+    flex: 1;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.profile-section {
+    display: none;
+}
+
+.profile-section.active {
+    display: block;
+}
+
+.profile-section h3 {
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+/* Форма профілю */
+.profile-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    position: relative;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #555;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
+.form-row {
+    display: flex;
+    gap: 10px;
+}
+
+.form-row .form-control {
+    flex: 1;
+}
+
+/* Блок з датою народження та статтю */
+.birth-gender-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+    grid-column: span 2;
+}
+
+/* Радіо кнопки статі */
+.gender-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.gender-option {
+    display: flex;
+    align-items: center;
+}
+
+.gender-option input {
+    margin-right: 8px;
+}
+
+.gender-options {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+.gender-options > label {
+    margin-right: 1rem;
+}
+
+/* Кнопка збереження */
+.save-btn-container {
+    grid-column: span 2;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.save-btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.save-btn:hover {
+    background-color: #2980b9;
+}
+
+/* Стилі для історії прийомів */
+.filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filter-dropdown {
+    flex: 1;
+    max-width: 200px;
+}
+
+.appointment-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-left: 4px solid #3498db;
+}
+
+.appointment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.appointment-header h4 {
+    margin: 0;
+    color: #2c3e50;
+}
+
+.status {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.status.planned {
+    background-color: #e1f5fe;
+    color: #2980b9;
+}
+
+.appointment-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.detail-row {
+    display: flex;
+    gap: 10px;
+}
+
+.detail-label {
+    font-weight: 500;
+    color: #555;
+}
+
+.detail-value {
+    color: #333;
+}
+
+/* Стилі для історії повідомлень */
+.messages-list {
+    margin-top: 20px;
+}
+
+.message-card {
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+}
+
+.message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.message-header h5 {
+    margin: 0;
+    color: #2c3e50;
+}
+
+.message-date {
+    color: #777;
+    font-size: 14px;
+}
+
+.message-preview {
+    color: #555;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Стилі для медичної картки */
+.medical-card-info {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.card-number p {
+    margin: 0 0 10px 0;
+    color: #555;
+}
+
+.number-display {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.number-display span {
+    font-size: 18px;
+    font-weight: 500;
+    color: #2c3e50;
+}
+
+.copy-btn {
+    background-color: #e1f5fe;
+    color: #2980b9;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.copy-btn:hover {
+    background-color: #d0ebfc;
+}
+
+/* Стилі для сповіщень */
+.notification-card {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 15px;
+    border-left: 4px solid #3498db;
+}
+
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.notification-date {
+    color: #777;
+    font-size: 14px;
+}
+
+.notification-badge {
+    background-color: #e1f5fe;
+    color: #2980b9;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.notification-content {
+    color: #333;
+    line-height: 1.5;
+}

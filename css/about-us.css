@@ -1,0 +1,64 @@
+@import url("main-style.css");
+
+.about-section {
+    padding: 60px 0;
+    background-color: white;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-title {
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.section-title {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.section-text {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.feature-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+}
+
+.feature-list li {
+    padding: 8px 0;
+    padding-left: 25px;
+    position: relative;
+    color: #555;
+}
+
+.feature-list li:before {
+    content: "•";
+    color: #3498db;
+    font-size: 20px;
+    position: absolute;
+    left: 5px;
+    top: 5px;
+}
+
+.security-badge {
+    background-color: #f0f8ff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 30px;
+    border-left: 4px solid #3498db;
+}

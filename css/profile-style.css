@@ -1,0 +1,406 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f7fa;
+}
+header, footer {
+  width: 100%;
+  box-sizing: border-box;
+}
+main {
+  flex: 1 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+body {
+    min-height: 100vh; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f5f7fa;
+    flex-direction: column; 
+}
+
+main {
+  flex: 1 0 auto;            /* main занимает всё доступное пространство */
+  width: 100vw;              /* чтобы занимал всю ширину экрана */
+  box-sizing: border-box;
+}  
+/* Общий контейнер профиля */
+.container_profile {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 0;
+  min-height: 600px;
+  box-sizing: border-box;
+  gap: 32px;
+}
+
+.profile-container {
+    display: flex;
+    width: 100%;
+    gap: 32px;
+}
+
+/* Боковая навигация */
+.profile-nav {
+  width: 250px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+}
+
+/* Имя пользователя в шапке боковой панели */
+.profile-nav .user-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+/* Список вкладок */
+.profile-nav .nav-tabs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Одиночная вкладка */
+.profile-nav .nav-tab {
+  padding: 12px 15px;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #2c3e50;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* Вкладка при наведении */
+.profile-nav .nav-tab:hover {
+  background-color: #f0f7ff;
+}
+
+/* Активная вкладка */
+.profile-nav .nav-tab.active {
+  background-color: #e1f5fe;
+  color: #3498db;
+  font-weight: 500;
+}
+
+/* Основной контент */
+.profile-content {
+    flex: 1 1 0;
+    min-width: 360px;
+    min-height: 400px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    padding: 30px 30px 40px 30px;
+    transition: min-height 0.2s;
+}
+
+/* Секция внутри контента (по умолчанию скрыта) */
+.profile-section {
+  display: none; /* по умолчанию скрыты */
+}
+/* Активная секция */
+.profile-section.active {
+  display: block;
+}
+
+/* Заголовки секций */
+.profile-section h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #2c3e50;
+}
+
+/* Фильтры (в историях) */
+.filters {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.filter-dropdown {
+  flex: 1;
+  max-width: 200px;
+}
+
+.filter-dropdown select {
+  width: 100%;
+  padding: 6px 10px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* Карточка приёма */
+.appointment-card {
+  background-color: #f9f9f9;
+  border-left: 4px solid #3498db;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+/* Хэдер карточки приёма */
+.appointment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.appointment-header h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+/* Статус приёма */
+.status {
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.status.planned {
+  background-color: #e1f5fe;
+  color: #2980b9;
+}
+
+/* Детали приёма */
+.appointment-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.detail-row {
+  display: flex;
+  gap: 10px;
+}
+
+.detail-label {
+  font-weight: 500;
+  color: #555;
+}
+
+.detail-value {
+  color: #333;
+}
+
+/* Список сообщений */
+.messages-list {
+  margin-top: 20px;
+}
+
+.message-card {
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+}
+
+.message-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.message-header h5 {
+  margin: 0;
+  font-size: 16px;
+  color: #2c3e50;
+}
+
+.message-date {
+  font-size: 14px;
+  color: #777;
+}
+
+.message-preview {
+  font-size: 14px;
+  color: #555;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Медицинская карта */
+.medical-card-info {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+.card-number p {
+  margin: 0 0 10px 0;
+  color: #555;
+}
+
+.number-display {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.number-display span {
+  font-size: 18px;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.copy-btn {
+  background-color: #e1f5fe;
+  color: #2980b9;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.copy-btn:hover {
+  background-color: #d0ebfc;
+}
+
+/* Уведомления */
+.notification-card {
+  background-color: #f9f9f9;
+  border-left: 4px solid #3498db;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 15px;
+  box-sizing: border-box;
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.notification-date {
+  font-size: 14px;
+  color: #777;
+}
+
+.notification-badge {
+  background-color: #e1f5fe;
+  color: #2980b9;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.notification-content {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* Форма редактирования профиля */
+.profile-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.profile-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-form .form-group label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #555;
+}
+
+.profile-form .form-control {
+  width: 100%;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Блок дата рождения и пол */
+.birth-gender-container {
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  box-sizing: border-box;
+}
+
+.birth-gender-container .form-row {
+  display: flex;
+  gap: 10px;
+}
+
+.gender-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.gender-option {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Кнопка сохранить */
+.save-btn-container {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+.save-btn {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.save-btn:hover {
+  background-color: #2980b9;
+}
