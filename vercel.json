@@ -1,15 +1,4 @@
 {
-  "functions": {
-    "index.php": {
-      "runtime": "vercel-php@0.5.2"
-    },
-    "modules/**/*.php": {
-      "runtime": "vercel-php@0.5.2"
-    },
-    "helpers/**/*.php": {
-      "runtime": "vercel-php@0.5.2"
-    }
-  },
   "routes": [
     { "src": "/css/(.*)", "dest": "/css/$1" },
     { "src": "/js/(.*)", "dest": "/js/$1" },
