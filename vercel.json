@@ -1,11 +1,6 @@
 {
   "routes": [
-    { "src": "/css/(.*)", "dest": "/css/$1" },
-    { "src": "/js/(.*)", "dest": "/js/$1" },
-    { "src": "/images/(.*)", "dest": "/images/$1" },
-    { "src": "/vendor/(.*)", "dest": "/vendor/$1" },
-    { "src": "/modules/(.*)", "dest": "/modules/$1" },
-    { "src": "/helpers/(.*)", "dest": "/helpers/$1" },
+    { "src": "/test", "dest": "/test.php" },
     { "src": "/(.*)", "dest": "/index.php" }
   ]
 }
