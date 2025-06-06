@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp"
+    android:background="#f5f5f5">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:background="#EEEEEE"
+        android:padding="24dp"
+        android:layout_margin="12dp"
+        android:elevation="4dp"
+        android:clipToPadding="false"
+        android:layout_gravity="center_horizontal"
+        android:backgroundTint="#DDDDDD"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="48dp"
+        android:paddingTop="32dp"
+        android:paddingBottom="32dp"
+        android:layout_marginHorizontal="16dp">
+
+        <EditText
+            android:id="@+id/editTextFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ім'я"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            android:inputType="textPersonName"/>
+
+        <EditText
+            android:id="@+id/editTextLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Фамілія"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/editTextPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Номер телефону"
+            android:inputType="phone"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/editTextBirthdate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Дата народження"
+            android:inputType="date"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <Spinner
+            android:padding="12dp"
+            android:background="@drawable/edittext_background"
+            android:id="@+id/spinnerGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="#CCCCCC"/>
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Електронна адреса"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Пароль"
+            android:inputType="textPassword"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:layout_marginBottom="20dp"/>
+        <EditText
+            android:id="@+id/editTextAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Адреса"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <Spinner
+            android:padding="12dp"
+            android:background="@drawable/spinner_background"
+            android:id="@+id/spinnerBloodType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:backgroundTint="#CCCCCC"/>
+
+        <EditText
+            android:id="@+id/editTextAllergies"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Алергії"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/editTextChronicConditions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Хронічні захворювання"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/editTextEmergencyContactName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ім'я контактної особи"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"/>
+
+        <EditText
+            android:id="@+id/editTextEmergencyContactPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Телефон контактної особи"
+            android:inputType="phone"
+            android:background="@drawable/edittext_background"
+            android:padding="12dp"
+            android:layout_marginBottom="20dp"/>
+
+        <Button
+            android:id="@+id/buttonRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Зареєструватися"
+            android:backgroundTint="#666666"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/button_rounded"/>
+
+        <Button
+            android:id="@+id/buttonGoogle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Зареєструватися через Google"
+            android:backgroundTint="#4285F4"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="12dp"
+            android:background="@drawable/button_rounded"/>
+
+        <Button
+            android:id="@+id/buttonFacebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Зареєструватися через Facebook"
+            android:backgroundTint="#3b5998"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/button_rounded"/>
+    </LinearLayout>
+</ScrollView>

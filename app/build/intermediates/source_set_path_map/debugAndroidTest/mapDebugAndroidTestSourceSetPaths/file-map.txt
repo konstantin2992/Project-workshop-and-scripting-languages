@@ -1,0 +1,5 @@
+com.example.healthsync.test.app-core-1.6.1-0 C:\Users\miner\.gradle\caches\8.10.2\transforms\76b9e4cd130a6b16bf7d3ea8d36a8595\transformed\core-1.6.1\res
+com.example.healthsync.test.app-androidTest-1 D:\Programming\HealthSync\app\build\generated\res\resValues\androidTest\debug
+com.example.healthsync.test.app-mergeDebugAndroidTestResources-2 D:\Programming\HealthSync\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.healthsync.test.app-mergeDebugAndroidTestResources-3 D:\Programming\HealthSync\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.healthsync.test.app-debugAndroidTest-4 D:\Programming\HealthSync\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

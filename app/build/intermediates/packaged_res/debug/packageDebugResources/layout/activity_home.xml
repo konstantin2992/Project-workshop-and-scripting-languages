@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#F5F5F5"
+    android:gravity="center">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Вітаємо в HealthSync!"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="32dp" />
+
+    <Button
+        android:id="@+id/buttonOnlineBooking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Онлайн запис"
+        android:backgroundTint="#4285F4"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_rounded" />
+
+    <Button
+        android:id="@+id/buttonCabinet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Особистий кабінет"
+        android:backgroundTint="#4CAF50"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_rounded" />
+
+    <Button
+        android:id="@+id/buttonFeedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Зворотній зв’язок"
+        android:backgroundTint="#FF9800"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/button_rounded" />
+</LinearLayout>

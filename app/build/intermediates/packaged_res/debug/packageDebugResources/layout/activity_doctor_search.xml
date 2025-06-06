@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <!-- Основной контент -->
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+    <!-- Кастомный Toolbar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:orientation="horizontal">
+
+      <ImageButton
+          android:id="@+id/btn_back"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:src="@drawable/ic_arrow_back"
+          android:contentDescription="Назад"
+          android:padding="16dp"
+          android:background="?attr/selectableItemBackgroundBorderless" />
+
+      <TextView
+          android:layout_width="0dp"
+          android:layout_height="match_parent"
+          android:layout_weight="1"
+          android:text="Пошук лікарів"
+          android:textColor="@android:color/white"
+          android:textSize="20sp"
+          android:gravity="center_vertical" />
+
+      <ImageButton
+          android:id="@+id/btn_filter"
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent"
+          android:src="@drawable/ic_filter_list"
+          android:contentDescription="Фільтри"
+          android:padding="16dp"
+          android:background="?attr/selectableItemBackgroundBorderless" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerDoctors"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+  </LinearLayout>
+
+  <!-- Панель фильтров -->
+  <com.google.android.material.navigation.NavigationView
+      android:id="@+id/nav_filters"
+      android:layout_width="320dp"
+      android:layout_height="match_parent"
+      android:layout_gravity="start"
+      app:headerLayout="@layout/nav_header_filters">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="56dp">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          android:padding="16dp">
+
+        <!-- Місто -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Місто"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+        <CheckBox
+            android:id="@+id/cb_kyiv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Київ"/>
+
+        <CheckBox
+            android:id="@+id/cb_lviv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Львів"/>
+
+        <!-- Тип клініки -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Тип клініки"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <CheckBox
+            android:id="@+id/cb_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Державні"/>
+
+        <CheckBox
+            android:id="@+id/cb_private"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Приватні"/>
+
+        <!-- Стать лікаря -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Стать лікаря"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <RadioGroup
+            android:id="@+id/rg_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+          <RadioButton
+              android:id="@+id/rb_male"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Чоловік"/>
+
+          <RadioButton
+              android:id="@+id/rb_female"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:text="Жінка"/>
+        </RadioGroup>
+
+        <!-- Кнопка -->
+        <Button
+            android:id="@+id/btn_apply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Застосувати"
+            android:layout_marginTop="24dp"/>
+      </LinearLayout>
+    </ScrollView>
+  </com.google.android.material.navigation.NavigationView>
+</androidx.drawerlayout.widget.DrawerLayout>

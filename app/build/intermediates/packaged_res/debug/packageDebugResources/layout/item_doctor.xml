@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:elevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <!-- Фото с улучшениями -->
+        <ImageView
+            android:id="@+id/imageDoctor"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/ic_doctor_placeholder"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:layout_marginEnd="12dp" />
+
+        <!-- Основная информация -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textDoctorName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="ПІБ лікаря"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/textDoctorSpecialty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Спеціальність"
+                android:textSize="14sp"
+                android:layout_marginBottom="2dp"/>
+
+            <TextView
+                android:id="@+id/textDoctorClinic"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Клініка"
+                android:textSize="13sp"
+                android:layout_marginBottom="2dp"/>
+
+            <TextView
+                android:id="@+id/textDoctorCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Місто"
+                android:textSize="13sp"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:id="@+id/textDoctorPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Від 300 грн"
+                android:textSize="13sp"
+                android:layout_marginBottom="2dp"/>
+
+            <TextView
+                android:id="@+id/textDoctorRating"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⭐ 4.5 (123)"
+                android:textSize="13sp"
+                android:layout_marginBottom="8dp"/>
+
+            <Button
+                android:id="@+id/buttonSelectDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Записатися"
+                android:layout_marginTop="8dp" />
+        </LinearLayout>
+
+        <!-- Блок времени с ID -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingStart="8dp">
+
+            <TextView
+                android:id="@+id/textTodayLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Сьогодні"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/layoutTimeSlots"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

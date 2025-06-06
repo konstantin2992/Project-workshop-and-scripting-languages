@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="blood_type_options">
+        <item>Група крові</item>
+        <item>O(I) Rh+</item>
+        <item>O(I) Rh−</item>
+        <item>A(II) Rh+</item>
+        <item>A(II) Rh−</item>
+        <item>B(III) Rh+</item>
+        <item>B(III) Rh−</item>
+        <item>AB(IV) Rh+</item>
+        <item>AB(IV) Rh−</item>
+    </string-array>
+    <string-array name="gender_options">
+        <item>Стать</item>
+        <item>Чоловіча</item>
+        <item>Жіноча</item>
+        <item>Інше</item>
+    </string-array>
+    <color name="black">#FF000000</color>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="gray_light">#F0F0F0</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">HealthSync</string>
+    <string name="appointments_history">Історія прийомів</string>
+    <string name="back">Назад</string>
+    <string name="medical_card">Медична картка</string>
+    <string name="messages_history">Історія повідомлень</string>
+    <string name="notifications">Сповіщення</string>
+    <string name="patient_cabinet">Кабінет пацієнта</string>
+    <string name="profile">Профіль</string>
+    <style name="Base.Theme.HealthSync" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="MenuButton" parent="Widget.AppCompat.Button.Borderless">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:layout_marginBottom">8dp</item>
+    <item name="android:textColor">@color/black</item>
+    <item name="android:background">?attr/selectableItemBackground</item>
+    <item name="android:gravity">start</item>
+    <item name="android:textAllCaps">false</item>
+</style>
+    <style name="Theme.HealthSync" parent="Base.Theme.HealthSync"/>
+</resources>
